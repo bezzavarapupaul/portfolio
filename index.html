@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MY PORTFOLIO WEBSITE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">RESUME</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">QUIT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">ABOUT</a></li>
+
+                </ul>
+               
+            </nav>
+            <div class="header-text">
+                <p>A PORTFOLIO PAGE</p>
+                <h1>HEY,<br>THIS WAS <span>PAUL'S</span> CREATION</h1>
+            </div>
+        </div>
+    </div>
+    /*-----------------about-------------------*/
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+            
+                <div class="about-col-1">
+                    <img src="images/picsa.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="para">A computer science graduate with a strong theoretical foundation and a passion for learning</p>
+                    <div class= "tab-titles">
+                        <p class="tab-links active" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>C LANGUAGE</span><br>BASICS</li>
+                            <li><span>PYTHON</span><br>BASICS</li>
+                            <li><span>JAVA</span><br>BASICS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>FRESHER</span><br>Bachelor of Technology in Computer Science Education<br>Specialization : Artifial Intelligence & Machine Learning</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>B.TECH</span><br>NRI INSTITUTE OF TECHNOLOGY  [2021-2025]<br>Aggregate : -</li>
+                            <li><span>INTERMEDIATE</span><br>SRI CHAITANYA JUNIOR COLLEGE [2019-2021]<br>Aggregate : 90.4%</li>
+                            <li><span>10TH</span><br>ST JOSEPH'S HIGH SCHOOL [2018-2019]<br>Aggregate : 98%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <div>
+        <img src="images/software-development-specialist.jpg"
+    </div>
+    </body>
+</html>
